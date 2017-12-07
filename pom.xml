@@ -1,0 +1,199 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.jusfoun</groupId>
+	<artifactId>kettle</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.3.5.RELEASE</version>
+	</parent>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.datatype</groupId>
+			<artifactId>jackson-datatype-hibernate4</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.datatype</groupId>
+			<artifactId>jackson-datatype-json-org</artifactId>
+			<version>2.6.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>11.2.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.6</version>
+		</dependency>
+		<dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.0.26</version>
+        </dependency>
+		<!-- <dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.14</version>
+		</dependency> -->
+
+		<!-- mvn install:install-file -Dfile=commons-vfs-20100924-pentaho.jar -DgroupId=org.apache -DartifactId=commons-vfs -Dversion=20100924 -Dpackaging=jar -->
+		<dependency>
+			<groupId>org.apache</groupId>
+			<artifactId>commons-vfs</artifactId>
+			<version>20100924</version>
+		</dependency>
+		<!-- mvn install:install-file -Dfile=edtftpj-2.1.0.jar -DgroupId=com.enterprisedt -DartifactId=edtftpj -Dversion=2.1.0 -Dpackaging=jar -->
+		<dependency>
+			<groupId>com.enterprisedt</groupId>
+			<artifactId>edtftpj</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+		<!-- mvn install:install-file -Dfile=kettle-core-5.0.1-stable.jar -DgroupId=org.pentaho -DartifactId=kettle-core -Dversion=5.0.1-stable -Dpackaging=jar -->
+		<dependency>
+			<groupId>org.pentaho</groupId>
+			<artifactId>kettle-core</artifactId>
+			<version>5.0.1-stable</version>
+		</dependency>
+		<!-- mvn install:install-file -Dfile=kettle-dbdialog-5.0.1-stable.jar -DgroupId=org.pentaho -DartifactId=kettle-dbdialog -Dversion=5.0.1-stable -Dpackaging=jar -->
+		<dependency>
+			<groupId>org.pentaho</groupId>
+			<artifactId>kettle-dbdialog</artifactId>
+			<version>5.0.1-stable</version>
+		</dependency>		
+		<!-- mvn install:install-file -Dfile=kettle-engine-5.0.1-stable.jar -DgroupId=org.pentaho -DartifactId=kettle-engine -Dversion=5.0.1-stable -Dpackaging=jar -->
+		<dependency>
+			<groupId>org.pentaho</groupId>
+			<artifactId>kettle-engine</artifactId>
+			<version>5.0.1-stable</version>
+		</dependency>	
+		<!-- mvn install:install-file -Dfile=metastore-5.0.1-stable.jar -DgroupId=org.pentaho -DartifactId=metastore -Dversion=5.0.1-stable -Dpackaging=jar -->
+		<dependency>
+			<groupId>org.pentaho</groupId>
+			<artifactId>metastore</artifactId>
+			<version>5.0.1-stable</version>
+		</dependency>
+		<!-- mvn install:install-file -Dfile=esapi-2.0.1.jar -DgroupId=org.owasp -DartifactId=esapi -Dversion=2.0.1 -Dpackaging=jar -->
+		<dependency>
+			<groupId>org.owasp</groupId>
+			<artifactId>esapi</artifactId>
+			<version>2.0.1</version>
+		</dependency>
+		<dependency>
+		    <groupId>commons-pool</groupId>
+		    <artifactId>commons-pool</artifactId>
+		    <version>1.6</version>
+		</dependency>
+		<dependency>
+		    <groupId>commons-dbcp</groupId>
+		    <artifactId>commons-dbcp</artifactId>
+		    <version>1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<!-- jjf add start 20160830 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-log4j</artifactId>
+		</dependency>
+		<!-- jjf add end -->
+		
+		<!-- https://mvnrepository.com/artifact/net.sourceforge.jtds/jtds -->
+		<dependency>
+			<groupId>net.sourceforge.jtds</groupId>
+			<artifactId>jtds</artifactId>
+			<version>1.2.4</version>
+		</dependency>
+		<!-- mvn install:install-file -Dfile=sqljdbc4.jar -Dpackaging=jar -DgroupId=com.microsoft.sqlserver -DartifactId=sqljdbc4 -Dversion=4.0 -->
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>sqljdbc4</artifactId>
+			<version>4.0</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<compilerArguments>
+						<extdirs>lib</extdirs>
+					</compilerArguments>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+ 				<configuration>
+					<mainClass>com.jusfoun.core.main.etl.KettleStarter</mainClass>
+					<finalName>ETLServer</finalName>
+					<classifier>package</classifier>
+					<!-- <executable>true</executable> -->
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin> 
+
+		</plugins>
+	</build>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>
+		<!-- <start-class>com.jusfoun.core.main.etl.KettleStarter</start-class> -->
+	</properties>
+</project>
